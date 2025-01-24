@@ -203,7 +203,8 @@ Google Cloud's [Application Integration platform](https://cloud.google.com/appli
 
 7.  Before you can run your query, you must enable BigQuery continuous query mode. In the BigQuery editor, click More -> Continuous Query mode
 
-      <img width="1372" alt="Screenshot 2025-01-24 at 10 49 28 AM" src="https://github.com/user-attachments/assets/42f0f982-d5d8-4937-9c83-c03a49b6e2c3" />
+      <img width="1377" alt="Screenshot 2025-01-24 at 10 51 23 AM" src="https://github.com/user-attachments/assets/b88608c2-392a-45e3-b74e-1a6a99fa2377" />
+
 
 8. When the window opens, click the button CONFIRM to enable continuous queries for this BigQuery editor tab.
 
