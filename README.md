@@ -169,10 +169,10 @@ Google Cloud's [Application Integration platform](https://cloud.google.com/appli
 **NOTE: If you do not see this option, your project or user may not be allowlisted to use the BigQuery continuous queries public preview. Fill out [this request form](https://docs.google.com/forms/d/e/1FAIpQLSc-SL89C9K997jSm_u3oQH-UGGe3brzsybbX6mf5VFaA0a4iA/viewform) to obtian access.**
 
 4. You'll now see your assignment created under your reservation:
+   
+      <img width="1398" alt="Screenshot 2025-01-24 at 10 48 28 AM" src="https://github.com/user-attachments/assets/514c2983-4288-443d-8c49-558eea217f48" />
 
-      <img width="1423" alt="Screenshot 2024-07-28 at 4 18 35 PM" src="https://github.com/user-attachments/assets/35464bff-d47d-4ffb-ae8f-ba8a30331992">
-
-5. Go back to the BigQuery SQL editor and paste the following SQL query:
+6. Go back to the BigQuery SQL editor and paste the following SQL query:
 
    **Note: The URI provided in the example below specifies a Pub/Sub Topic as the destination for the continuous query, with the GCP project listed as "my_project" and the Pub/Sub Topic listed as "my_topic". Be sure to change these to your own project/topic. You can also specify different destinations for a BigQuery continuous query, as described in [these examples](https://cloud.google.com/bigquery/docs/continuous-queries#examples).**
    
@@ -203,7 +203,7 @@ Google Cloud's [Application Integration platform](https://cloud.google.com/appli
 
 7.  Before you can run your query, you must enable BigQuery continuous query mode. In the BigQuery editor, click More -> Continuous Query mode
 
-      <img width="1143" alt="Screenshot 2024-08-01 at 6 31 38 PM" src="https://github.com/user-attachments/assets/a9e0db6b-2d5f-4048-92c8-68419b7f603f">
+      <img width="1372" alt="Screenshot 2025-01-24 at 10 49 28 AM" src="https://github.com/user-attachments/assets/42f0f982-d5d8-4937-9c83-c03a49b6e2c3" />
 
 8. When the window opens, click the button CONFIRM to enable continuous queries for this BigQuery editor tab.
 
