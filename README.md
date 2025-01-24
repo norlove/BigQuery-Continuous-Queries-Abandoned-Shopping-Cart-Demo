@@ -154,15 +154,15 @@ Google Cloud's [Application Integration platform](https://cloud.google.com/appli
 
 ## Create a BigQuery continuous query
 
-1. BigQuery continuous queries require a BigQuery Enterprise or Enterprise Plus reservation [[ref](https://cloud.google.com/bigquery/docs/continuous-queries-introduction#reservation_limitations)]. Create one now named "bq-continuous-queries-reservation" in the US multi-region, with 100 slots, and a 100 slot baseline (at the time of this writing BigQuery continuous queries does not support autoscaling).
+1. BigQuery continuous queries require a BigQuery Enterprise or Enterprise Plus reservation [[ref](https://cloud.google.com/bigquery/docs/continuous-queries-introduction#reservation_limitations)]. Create one now named "bq-continuous-queries-reservation" in the US multi-region, with 50 slots, and a 50 slot baseline (at the time of this writing BigQuery continuous queries does not support autoscaling).
+   
+      <img width="547" alt="Screenshot 2025-01-24 at 10 45 49 AM" src="https://github.com/user-attachments/assets/36736d00-b1f9-4f5e-bf8c-c3f1fa17c920" />
 
-      <img width="564" alt="Screenshot 2024-07-28 at 4 12 45 PM" src="https://github.com/user-attachments/assets/22d03b1b-0794-4f45-adc6-ba4a8dc4805b">
-
-2. Once the reservation has been created, click on the three dots under Actions, and click "Create assignment". 
+3. Once the reservation has been created, click on the three dots under Actions, and click "Create assignment". 
 
       <img width="212" alt="Screenshot 2024-08-01 at 6 26 21 PM" src="https://github.com/user-attachments/assets/2d71fe08-d3c0-4d35-ab4a-769120f535e4">
 
-3. Click Browse and find the project you are using for this demo. Then Select "CONTINUOUS" as the Job Type. Click Create.
+4. Click Browse and find the project you are using for this demo. Then Select "CONTINUOUS" as the Job Type. Click Create.
 
       <img width="558" alt="Screenshot 2024-08-01 at 6 27 59 PM" src="https://github.com/user-attachments/assets/8f455be4-5fd1-469c-be3f-e3f3e3d43133">
 
