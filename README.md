@@ -191,10 +191,12 @@ Google Cloud's [Application Integration platform](https://cloud.google.com/appli
              customer_name,
              customer_email,
              CONCAT("Write an email to customer ", customer_name, ", explaining the benefits and encouraging them to complete their purchase of: ", products, ". Also show other items the customer might be interested in. Provide the response email in HTML format.") AS prompt
-             FROM APPENDS(TABLE `Continuous_Queries_Demo.abandoned_carts`, 
-                  #Configure the APPENDS TVF start_timestamp to be just below the 7 day default BigQuery time travel window.
-                  TIMESTAMP_SUB(CURRENT_TIMESTAMP(), INTERVAL 10079 MINUTE), #Adjust as required
-                  NULL)),
+            FROM
+                APPENDS(TABLE `Continuous_Queries_Demo.abandoned_carts`,
+                  -- Configure the APPENDS TVF start_timestamp to specify when you want to
+                  -- start processing data using your continuous query.
+                  -- Here we process data as ten minutes before the current time.
+                  CURRENT_TIMESTAMP() - INTERVAL 10 MINUTE)),
          STRUCT( 1024 AS max_output_tokens,
            0.2 AS temperature,
            1 AS candidate_count, 
