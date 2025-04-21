@@ -5,8 +5,6 @@ BigQuery continuous queries are SQL statements that run continuously, allowing y
 
 Documentation on BigQuery continuous queries can be found [HERE](https://cloud.google.com/bigquery/docs/continuous-queries-introduction), and a blog which provides context of BigQuery continuous queries can be found [HERE](https://cloud.google.com/blog/products/data-analytics/bigquery-continuous-queries-makes-data-analysis-real-time).
 
-Be sure to request your project(s) be allowlisted for BigQuery continuous queries by submitting [this request form](https://docs.google.com/forms/d/e/1FAIpQLSc-SL89C9K997jSm_u3oQH-UGGe3brzsybbX6mf5VFaA0a4iA/viewform).
-
 ----------------------------------------------------------------------------------------------------
 
 Imagine this: You've poured your heart into creating a fantastic product, attracted potential customers to your website, and they've even added items to their cart. But then, they vanish without completing the purchase. Frustrating, right?  Shopping cart abandonment is a widespread issue; the average cart abandonment rate hovers around a disheartening 70% [according to the Baymard Institute](https://baymard.com/lists/cart-abandonment-rate). One solution? Real-time engagement that rekindles their interest with a BigQuery continuous query.
@@ -166,9 +164,7 @@ Google Cloud's [Application Integration platform](https://cloud.google.com/appli
 
       <img width="558" alt="Screenshot 2024-08-01 at 6 27 59 PM" src="https://github.com/user-attachments/assets/8f455be4-5fd1-469c-be3f-e3f3e3d43133">
 
-**NOTE: If you do not see this option, your project or user may not be allowlisted to use the BigQuery continuous queries public preview. Fill out [this request form](https://docs.google.com/forms/d/e/1FAIpQLSc-SL89C9K997jSm_u3oQH-UGGe3brzsybbX6mf5VFaA0a4iA/viewform) to obtian access.**
-
-4. You'll now see your assignment created under your reservation:
+5. You'll now see your assignment created under your reservation:
    
       <img width="1398" alt="Screenshot 2025-01-24 at 10 48 28 AM" src="https://github.com/user-attachments/assets/514c2983-4288-443d-8c49-558eea217f48" />
 
