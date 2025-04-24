@@ -37,7 +37,7 @@ To demonstrate this example, let's build a basic quick and dirty demo. We’ll u
 
 5. After the connection has been created, click "Go to connection", and in the Connection Info pane, copy the service account ID for use in the next step.
 
-6. Grant Vertex AI User role IAM access to the service account ID you just copied using [these steps](https://cloud.google.com/bigquery/docs/bigquery-ml-remote-model-tutorial#set_up_access).
+6. Grant Vertex AI User role IAM access to the service account ID you just copied using [these steps](https://cloud.google.com/bigquery/docs/bigquery-ml-remote-model-tutorial#set_up_connection_access).
 
 7. Create a BigQuery ML remote model with Gemini 1.5 Pro by running the following SQL query in your BigQuery environment:
       ```
