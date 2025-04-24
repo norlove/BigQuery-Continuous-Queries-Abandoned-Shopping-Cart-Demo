@@ -47,7 +47,7 @@ To demonstrate this example, let's build a basic quick and dirty demo. We’ll u
       OPTIONS(endpoint = 'gemini-1.5-pro');
       ```
 
-8. Create a BigQuery Service Account named "bq-continuous-query-sa", granting yourself permissions to subit a job that runs using the service account [[ref](https://cloud.google.com/bigquery/docs/continuous-queries#user_account_permissions)], and granting permissions to the service account itself to access BigQuery resources [[ref](https://cloud.google.com/bigquery/docs/continuous-queries#service_account_permissions)].
+8. Create a BigQuery Service Account named "bq-continuous-query-sa", granting yourself permissions to submit a job that runs using the service account [[ref](https://cloud.google.com/bigquery/docs/continuous-queries#user_account_permissions)], and granting permissions to the service account itself to access BigQuery resources [[ref](https://cloud.google.com/bigquery/docs/continuous-queries#service_account_permissions)].
 
 **NOTE: if you have issues with this demo, it is 9 times out of 10 related to an IAM permissions issue.**
 
