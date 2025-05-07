@@ -39,15 +39,15 @@ To demonstrate this example, let's build a basic quick and dirty demo. We’ll u
 
 6. Grant Vertex AI User role IAM access to the service account ID you just copied using [these steps](https://cloud.google.com/bigquery/docs/bigquery-ml-remote-model-tutorial#set_up_connection_access).
 
-7. Create a BigQuery ML remote model with Gemini 1.5 Pro by running the following SQL query in your BigQuery environment:
+7. Create a BigQuery ML remote model with Gemini 2.0 Flash by running the following SQL query in your BigQuery environment:
       ```
-      #Creates a BigQuery ML remote model named gemini_1_5_pro
-      CREATE MODEL `Continuous_Queries_Demo.gemini_1_5_pro`
+      #Creates a BigQuery ML remote model named gemini_2_0_flash
+      CREATE OR REPLACE MODEL `Cymbal_Pets.gemini_2_0_flash`
       REMOTE WITH CONNECTION `us.continuous-queries-connection`
-      OPTIONS(endpoint = 'gemini-1.5-pro');
+      OPTIONS (ENDPOINT = 'gemini-2.0-flash');
       ```
 
-8. Create a BigQuery Service Account named "bq-continuous-query-sa", granting yourself permissions to submit a job that runs using the service account [[ref](https://cloud.google.com/bigquery/docs/continuous-queries#user_account_permissions)], and granting permissions to the service account itself to access BigQuery resources [[ref](https://cloud.google.com/bigquery/docs/continuous-queries#service_account_permissions)].
+8. [Create a BigQuery Service Account](https://cloud.google.com/iam/docs/service-accounts-create#creating) named "bq-continuous-query-sa", granting yourself permissions to submit a job that runs using the service account [[ref](https://cloud.google.com/bigquery/docs/continuous-queries#user_account_permissions)], and granting permissions to the service account itself to access BigQuery resources as a BigQuery Data Editor [[ref](https://cloud.google.com/bigquery/docs/continuous-queries#service_account_permissions)].
 
 **NOTE: if you have issues with this demo, it is 9 times out of 10 related to an IAM permissions issue.**
 
@@ -58,6 +58,8 @@ To demonstrate this example, let's build a basic quick and dirty demo. We’ll u
       <img width="557" alt="Screenshot 2024-07-28 at 4 21 13 PM" src="https://github.com/user-attachments/assets/ce86bcb7-7d22-46d0-8ec3-b904423db1ca">
    
 2. Grant the service account you created in step #8 permissions to the Pub/Sub topic with the Pub/Sub Viewer and Pub/Sub Publisher roles [[ref](https://cloud.google.com/bigquery/docs/export-to-pubsub#service_account_permissions_2)].
+
+   
 
 ## Setup an Application Integration trigger
 Google Cloud's [Application Integration platform](https://cloud.google.com/application-integration/docs/overview) offers a comprehensive set of core integration tools to connect and manage the multitude of applications (Google Cloud services and third-party SaaS). We'll use it to create a trigger based on our Pub/Sub topic and send an email based on the contents of the Pub/Sub message.
@@ -181,8 +183,8 @@ Google Cloud's [Application Integration platform](https://cloud.google.com/appli
          TO_JSON_STRING(
            STRUCT(
              customer_name AS customer_name,
-             customer_email AS customer_email, REGEXP_REPLACE(REGEXP_EXTRACT(ml_generate_text_llm_result,r"(?im)\<html\>(?s:.)*\<\/html\>"), r"(?i)\[your name\]", "Your friends at AI Megastore") AS customer_message))
-       FROM ML.GENERATE_TEXT( MODEL `Continuous_Queries_Demo.gemini_1_5_pro`,
+             customer_email AS customer_email, REGEXP_REPLACE(REGEXP_EXTRACT(ml_generate_text_llm_result,r"(?im)\<html\>(?s:.)*\<\/html\>"), r"(?i)\[Your Store Name\]", "Your friends at AI Megastore") AS customer_message))
+       FROM ML.GENERATE_TEXT( MODEL `Continuous_Queries_Demo.gemini_2_0_flash`,
            (SELECT
              customer_name,
              customer_email,
