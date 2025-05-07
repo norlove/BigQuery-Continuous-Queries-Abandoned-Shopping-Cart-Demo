@@ -154,9 +154,9 @@ Google Cloud's [Application Integration platform](https://cloud.google.com/appli
 
 ## Create a BigQuery continuous query
 
-1. BigQuery continuous queries require a BigQuery Enterprise or Enterprise Plus reservation [[ref](https://cloud.google.com/bigquery/docs/continuous-queries-introduction#reservation_limitations)]. Create one now named "bq-continuous-queries-reservation" in the US multi-region, with 50 slots, and a 0 slot baseline (leveraging slot autoscaling).
+1. BigQuery continuous queries require a BigQuery Enterprise or Enterprise Plus reservation [[ref](https://cloud.google.com/bigquery/docs/continuous-queries-introduction#reservation_limitations)]. Create one now named "bq-continuous-queries-reservation" in the US multi-region with 50 slots. You don't have to provide a slot baseline, as we'll use slot autoscaling.
    
-      <img width="547" alt="Screenshot 2025-01-24 at 10 45 49 AM" src="https://github.com/user-attachments/assets/36736d00-b1f9-4f5e-bf8c-c3f1fa17c920" />
+      <img width="549" alt="Screenshot 2025-05-07 at 9 45 26 AM" src="https://github.com/user-attachments/assets/d6fca8d3-18b1-4b2c-bc94-fe367aa85fb7" />
 
 3. Once the reservation has been created, click on the three dots under Actions, and click "Create assignment". 
 
@@ -168,7 +168,7 @@ Google Cloud's [Application Integration platform](https://cloud.google.com/appli
 
 5. You'll now see your assignment created under your reservation:
    
-      <img width="1398" alt="Screenshot 2025-01-24 at 10 48 28 AM" src="https://github.com/user-attachments/assets/514c2983-4288-443d-8c49-558eea217f48" />
+      <img width="1428" alt="Screenshot 2025-05-07 at 9 46 28 AM" src="https://github.com/user-attachments/assets/33931523-b5c1-4302-be29-657adcf14045" />
 
 6. Go back to the BigQuery SQL editor and paste the following SQL query:
 
