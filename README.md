@@ -195,7 +195,7 @@ Google Cloud's [Application Integration platform](https://cloud.google.com/appli
                   -- start processing data using your continuous query.
                   -- Here we process data as ten minutes before the current time.
                   CURRENT_TIMESTAMP() - INTERVAL 10 MINUTE)),
-         STRUCT( 1024 AS max_output_tokens,
+         STRUCT( 2048 AS max_output_tokens,
            0.2 AS temperature,
            1 AS candidate_count, 
            TRUE AS flatten_json_output)))
