@@ -57,9 +57,9 @@ To demonstrate this example, let's build a basic quick and dirty demo. We’ll u
    
       <img width="557" alt="Screenshot 2024-07-28 at 4 21 13 PM" src="https://github.com/user-attachments/assets/ce86bcb7-7d22-46d0-8ec3-b904423db1ca">
    
-2. Grant the service account you created in step #8 permissions to the Pub/Sub topic with the Pub/Sub Viewer and Pub/Sub Publisher roles [[ref](https://cloud.google.com/bigquery/docs/export-to-pubsub#service_account_permissions_2)].
+2. Grant the service account you created in step #8 permissions to the Pub/Sub topic with the Pub/Sub Viewer and Pub/Sub Publisher roles [[ref](https://cloud.google.com/bigquery/docs/export-to-pubsub#service_account_permissions_2)]. This can be done directly from the Pub/Sub page in the Cloud Console.
 
-   
+   <img width="618" alt="Screenshot 2025-05-07 at 9 40 05 AM" src="https://github.com/user-attachments/assets/9571e117-2262-4f23-8207-051a7a2e7489" />
 
 ## Setup an Application Integration trigger
 Google Cloud's [Application Integration platform](https://cloud.google.com/application-integration/docs/overview) offers a comprehensive set of core integration tools to connect and manage the multitude of applications (Google Cloud services and third-party SaaS). We'll use it to create a trigger based on our Pub/Sub topic and send an email based on the contents of the Pub/Sub message.
@@ -86,7 +86,7 @@ Google Cloud's [Application Integration platform](https://cloud.google.com/appli
 
 10. Click the Data Mapping item and click the button that says "OPEN DATA MAPPING EDITOR"
 
-11. You'll crate four Input variables, each initially starting as "CloudPubSubMessage.data" :
+11. You'll create four Input variables, each initially starting as "CloudPubSubMessage.data" :
 
       <img width="1044" alt="Screenshot 2024-07-28 at 4 45 15 PM" src="https://github.com/user-attachments/assets/46546ba1-461a-466f-b7fc-8c4008f1734f">
 
@@ -154,7 +154,7 @@ Google Cloud's [Application Integration platform](https://cloud.google.com/appli
 
 ## Create a BigQuery continuous query
 
-1. BigQuery continuous queries require a BigQuery Enterprise or Enterprise Plus reservation [[ref](https://cloud.google.com/bigquery/docs/continuous-queries-introduction#reservation_limitations)]. Create one now named "bq-continuous-queries-reservation" in the US multi-region, with 50 slots, and a 50 slot baseline (at the time of this writing BigQuery continuous queries does not support autoscaling).
+1. BigQuery continuous queries require a BigQuery Enterprise or Enterprise Plus reservation [[ref](https://cloud.google.com/bigquery/docs/continuous-queries-introduction#reservation_limitations)]. Create one now named "bq-continuous-queries-reservation" in the US multi-region, with 50 slots, and a 0 slot baseline (leveraging slot autoscaling).
    
       <img width="547" alt="Screenshot 2025-01-24 at 10 45 49 AM" src="https://github.com/user-attachments/assets/36736d00-b1f9-4f5e-bf8c-c3f1fa17c920" />
 
