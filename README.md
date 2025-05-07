@@ -154,7 +154,7 @@ Google Cloud's [Application Integration platform](https://cloud.google.com/appli
 
 ## Create a BigQuery continuous query
 
-1. BigQuery continuous queries require a BigQuery Enterprise or Enterprise Plus reservation [[ref](https://cloud.google.com/bigquery/docs/continuous-queries-introduction#reservation_limitations)]. Create one now named "bq-continuous-queries-reservation" in the US multi-region with 50 slots. You don't have to provide a slot baseline, as we'll use slot autoscaling.
+1. BigQuery continuous queries require a BigQuery Enterprise or Enterprise Plus reservation [[ref](https://cloud.google.com/bigquery/docs/continuous-queries-introduction#reservation_limitations)]. [Create a reservation](https://cloud.google.com/bigquery/docs/reservations-get-started#create_an_autoscaling_reservation) named "bq-continuous-queries-reservation" in the US multi-region with 50 slots. You don't have to provide a slot baseline, as we'll use slot autoscaling.
    
       <img width="549" alt="Screenshot 2025-05-07 at 9 45 26 AM" src="https://github.com/user-attachments/assets/d6fca8d3-18b1-4b2c-bc94-fe367aa85fb7" />
 
