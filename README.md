@@ -42,7 +42,7 @@ To demonstrate this example, let's build a basic quick and dirty demo. We’ll u
 7. Create a BigQuery ML remote model with Gemini 2.0 Flash by running the following SQL query in your BigQuery environment:
       ```
       #Creates a BigQuery ML remote model named gemini_2_0_flash
-      CREATE OR REPLACE MODEL `Cymbal_Pets.gemini_2_0_flash`
+      CREATE OR REPLACE MODEL `Continuous_Queries_Demo.gemini_2_0_flash`
       REMOTE WITH CONNECTION `us.continuous-queries-connection`
       OPTIONS (ENDPOINT = 'gemini-2.0-flash');
       ```
