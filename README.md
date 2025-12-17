@@ -39,12 +39,12 @@ To demonstrate this example, let's build a basic quick and dirty demo. We’ll u
 
 6. Grant Vertex AI User role IAM access to the service account ID you just copied using [these steps](https://cloud.google.com/bigquery/docs/bigquery-ml-remote-model-tutorial#set_up_connection_access).
 
-7. Create a BigQuery ML remote model with Gemini 2.0 Flash by running the following SQL query in your BigQuery environment:
+7. Create a BigQuery ML remote model with Gemini 2.5 Flash by running the following SQL query in your BigQuery environment:
       ```
-      #Creates a BigQuery ML remote model named gemini_2_0_flash
-      CREATE OR REPLACE MODEL `Continuous_Queries_Demo.gemini_2_0_flash`
+      #Creates a BigQuery ML remote model named gemini_2_5_flash
+      CREATE OR REPLACE MODEL `Continuous_Queries_Demo.gemini_2_5_flash`
       REMOTE WITH CONNECTION `us.continuous-queries-connection`
-      OPTIONS (ENDPOINT = 'gemini-2.0-flash');
+      OPTIONS (ENDPOINT = 'gemini-2.5-flash');
       ```
 
 8. [Create a BigQuery Service Account](https://cloud.google.com/iam/docs/service-accounts-create#creating) named "bq-continuous-query-sa", granting yourself permissions to submit a job that runs using the service account [[ref](https://cloud.google.com/bigquery/docs/continuous-queries#user_account_permissions)], and granting permissions to the service account itself to access BigQuery resources as a BigQuery Data Editor [[ref](https://cloud.google.com/bigquery/docs/continuous-queries#service_account_permissions)].
