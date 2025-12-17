@@ -184,7 +184,7 @@ Google Cloud's [Application Integration platform](https://cloud.google.com/appli
            STRUCT(
              customer_name AS customer_name,
              customer_email AS customer_email, REGEXP_REPLACE(REGEXP_EXTRACT(ml_generate_text_llm_result,r"(?im)\<html\>(?s:.)*\<\/html\>"), r"(?i)\[Your Store Name\]", "Your friends at AI Megastore") AS customer_message))
-       FROM ML.GENERATE_TEXT( MODEL `Continuous_Queries_Demo.gemini_2_0_flash`,
+       FROM ML.GENERATE_TEXT( MODEL `Continuous_Queries_Demo.gemini_2_5_flash`,
            (SELECT
              customer_name,
              customer_email,
